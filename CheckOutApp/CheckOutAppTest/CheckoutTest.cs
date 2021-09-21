@@ -40,13 +40,14 @@ namespace CheckOutAppTest
             decimal expectedTotal
         )
         {
+
             var checkOut = new Checkout();
             var itemList = new Dictionary<Item, int>();
-            //itemList.Add(new Item { DiscountRule = discountRuleForA, DiscountValue = discountValueForA, Name = "A", Price = priceOfA }, numberOfA);
+          
             itemList.Add(new Item { OfferQuantity = offerQuantityOfA, OfferPrice = offerPriceOfA, Sku = "A99", UnitPrice = unitPriceOfA }, quantityOfA);
             itemList.Add(new Item { OfferQuantity = offerQuantityOfB, OfferPrice = offerPriceOfB, Sku = "B15", UnitPrice = unitPriceOfB }, quantityOfB);
             itemList.Add(new Item { OfferQuantity = offerQuantityOfC, OfferPrice = offerPriceOfC, Sku = "C45", UnitPrice = unitPriceOfC }, quantityOfC);
-            //int totalPrice = checkOut.CalculateTotalPrice(itemList);
+      
 
 
             decimal totalPrice = checkOut.Total(itemList);

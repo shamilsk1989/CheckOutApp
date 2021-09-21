@@ -17,7 +17,6 @@ namespace CheckOutApp
                 totalPrice += item.Value * item.Key.UnitPrice;
                 int extraQuantity = item.Value / item.Key.OfferQuantity;
                 totalPrice -= extraQuantity * item.Key.OfferPrice;
-
             }
             return totalPrice;
         }
